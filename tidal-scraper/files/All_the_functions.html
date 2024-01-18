@@ -1,0 +1,2045 @@
+<div class="mw-parser-output"><p>Here are all the functions provided by the main Tidal library modules.
+</p><p>This is mainly intended as a guide for people helping document tidalcycles. Many of the following functions will be only for internal use and not of interest to end-user musicians, but there are some useful things here yet to be documented.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="All_the_functions.html#Sound.Tidal.Core"><span class="tocnumber">1</span> <span class="toctext">Sound.Tidal.Core</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="All_the_functions.html#Sound.Tidal.Control"><span class="tocnumber">2</span> <span class="toctext">Sound.Tidal.Control</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="All_the_functions.html#Sound.Tidal.UI"><span class="tocnumber">3</span> <span class="toctext">Sound.Tidal.UI</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="All_the_functions.html#Sound.Tidal.Pattern"><span class="tocnumber">4</span> <span class="toctext">Sound.Tidal.Pattern</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="All_the_functions.html#How_the_above_lists_were_made"><span class="tocnumber">5</span> <span class="toctext">How the above lists were made</span></a></li>
+</ul>
+</div>
+
+<h1><span class="mw-headline" id="Sound.Tidal.Core">Sound.Tidal.Core</span></h1>
+<table class="wikitable sortable">
+<tbody><tr>
+<th>Function
+</th>
+<th>Type
+</th>
+<th>Marked
+</th></tr>
+<tr>
+<td>#
+</td>
+<td><code>Sound.Tidal.Context.Unionable b =&gt; Pattern b -&gt; Pattern b -&gt; Pattern b</code>
+</td></tr>
+<tr>
+<td>%|
+</td>
+<td><code>Real a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>*|
+</td>
+<td><code>Num a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>+|
+</td>
+<td><code>Num a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>-|
+</td>
+<td><code>Num a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>/|
+</td>
+<td><code>Fractional a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>&lt;&gt;
+</td>
+<td><code>Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>&lt;|
+</td>
+<td><code>Sound.Tidal.Context.Unionable a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>&lt;~
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>&gt;|
+</td>
+<td><code>Sound.Tidal.Context.Unionable a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="every.html" title="every">_every</a>
+</td>
+<td><code>Int -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="every'.html" title="every'">_every'</a>
+</td>
+<td><code>Int -&gt; Int -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fast.html" title="fast">_fast</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="run.html" title="run">_run</a>
+</td>
+<td><code>(Enum a, Num a) =&gt; a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="scan.html" class="mw-redirect" title="scan">_scan</a>
+</td>
+<td><code>(Enum a, Num a) =&gt; a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="slow.html" title="slow">_slow</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="append.html" title="append">append</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="cat.html" title="cat">cat</a>
+</td>
+<td><code>[Pattern a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="compress.html" title="compress">compress</a>
+</td>
+<td><code>Arc -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=compressTo&amp;action=edit&amp;redlink=1" class="new" title="compressTo (page does not exist)">compressTo</a>
+</td>
+<td><code>Arc -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="cosine.html" class="mw-redirect" title="cosine">cosine</a>
+</td>
+<td><code>Fractional a =&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="density.html" class="mw-redirect" title="density">density</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="densityGap.html" class="mw-redirect" title="densityGap">densityGap</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=envEq&amp;action=edit&amp;redlink=1" class="new" title="envEq (page does not exist)">envEq</a>
+</td>
+<td><code>Pattern Double</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=envEqR&amp;action=edit&amp;redlink=1" class="new" title="envEqR (page does not exist)">envEqR</a>
+</td>
+<td><code>Pattern Double</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=envL&amp;action=edit&amp;redlink=1" class="new" title="envL (page does not exist)">envL</a>
+</td>
+<td><code>Pattern Double</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=envLR&amp;action=edit&amp;redlink=1" class="new" title="envLR (page does not exist)">envLR</a>
+</td>
+<td><code>Pattern Double</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="every.html" title="every">every</a>
+</td>
+<td><code>Pattern Int -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="every'.html" title="every'">every'</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Int -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fast.html" title="fast">fast</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fastAppend.html" class="mw-redirect" title="fastAppend">fastAppend</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fastCat.html" class="mw-redirect" title="fastCat">fastCat</a>
+</td>
+<td><code>[Pattern a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fastFromList.html" class="mw-redirect" title="fastFromList">fastFromList</a>
+</td>
+<td><code>[a] -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="fastGap.html" title="fastGap">fastGap</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=fastRepeatCycles&amp;action=edit&amp;redlink=1" class="new" title="fastRepeatCycles (page does not exist)">fastRepeatCycles</a>
+</td>
+<td><code>Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fastSqueeze.html" title="fastSqueeze">fastSqueeze</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fastcat.html" class="mw-redirect" title="fastcat">fastcat</a>
+</td>
+<td><code>[Pattern a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="foldEvery.html" title="foldEvery">foldEvery</a>
+</td>
+<td><code>[Int] -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fromList.html" title="fromList">fromList</a>
+</td>
+<td><code>[a] -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="fromMaybes.html" title="fromMaybes">fromMaybes</a>
+</td>
+<td><code>[Maybe a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="isaw.html" class="mw-redirect" title="isaw">isaw</a>
+</td>
+<td><code>(Fractional a, Real a) =&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="listToPat.html" title="listToPat">listToPat</a>
+</td>
+<td><code>[a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="overlay.html" class="mw-redirect" title="overlay">overlay</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="repeatCycles.html" title="repeatCycles">repeatCycles</a>
+</td>
+<td><code>Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="rev.html" title="rev">rev</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="run.html" title="run">run</a>
+</td>
+<td><code>(Enum a, Num a) =&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="saw.html" class="mw-redirect" title="saw">saw</a>
+</td>
+<td><code>(Fractional a, Real a) =&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="scan.html" class="mw-redirect" title="scan">scan</a>
+</td>
+<td><code>(Enum a, Num a) =&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="sig.html" title="sig">sig</a>
+</td>
+<td><code>(Time -&gt; a) -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="silence.html" title="silence">silence</a>
+</td>
+<td><code>Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="sine.html" class="mw-redirect" title="sine">sine</a>
+</td>
+<td><code>Fractional a =&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="slow.html" title="slow">slow</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="slowAppend.html" class="mw-redirect" title="slowAppend">slowAppend</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="slowCat.html" class="mw-redirect" title="slowCat">slowCat</a>
+</td>
+<td><code>[Pattern a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="slowSqueeze.html" title="slowSqueeze">slowSqueeze</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="slowcat.html" class="mw-redirect" title="slowcat">slowcat</a>
+</td>
+<td><code>[Pattern a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="sparsity.html" class="mw-redirect" title="sparsity">sparsity</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="square.html" class="mw-redirect" title="square">square</a>
+</td>
+<td><code>(Fractional a, Real a) =&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="stack.html" title="stack">stack</a>
+</td>
+<td><code>[Pattern a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="timeCat.html" class="mw-redirect" title="timeCat">timeCat</a>
+</td>
+<td><code>[(Time, Pattern a)] -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="tri.html" class="mw-redirect" title="tri">tri</a>
+</td>
+<td><code>(Fractional a, Real a) =&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="when.html" title="when">when</a>
+</td>
+<td><code>(Int -&gt; Bool) -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=whenT&amp;action=edit&amp;redlink=1" class="new" title="whenT (page does not exist)">whenT</a>
+</td>
+<td><code>(Time -&gt; Bool) -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="zoom.html" title="zoom">zoom</a>
+</td>
+<td><code>Arc -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>|%
+</td>
+<td><code>Real a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>|%|
+</td>
+<td><code>(Applicative a, Real b) =&gt; a b -&gt; a b -&gt; a b</code>
+</td></tr>
+<tr>
+<td>|*
+</td>
+<td><code>Num a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>|*|
+</td>
+<td><code>(Applicative a, Num b) =&gt; a b -&gt; a b -&gt; a b</code>
+</td></tr>
+<tr>
+<td>|+
+</td>
+<td><code>Num a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>|+|
+</td>
+<td><code>(Applicative a, Num b) =&gt; a b -&gt; a b -&gt; a b</code>
+</td></tr>
+<tr>
+<td>|-
+</td>
+<td><code>Num a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>|-|
+</td>
+<td><code>(Applicative a, Num b) =&gt; a b -&gt; a b -&gt; a b</code>
+</td></tr>
+<tr>
+<td>|/
+</td>
+<td><code>Fractional a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>|/|
+</td>
+<td><code>(Applicative a, Fractional b) =&gt; a b -&gt; a b -&gt; a b</code>
+</td></tr>
+<tr>
+<td>|&lt;
+</td>
+<td><code>Sound.Tidal.Context.Unionable a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>|&lt;|
+</td>
+<td><code>(Applicative a, Sound.Tidal.Context.Unionable b) =&gt; a b -&gt; a b -&gt; a b</code>
+</td></tr>
+<tr>
+<td>|&gt;
+</td>
+<td><code>Sound.Tidal.Context.Unionable a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td>|&gt;|
+</td>
+<td><code>(Applicative a, Sound.Tidal.Context.Unionable b) =&gt; a b -&gt; a b -&gt; a b</code>
+</td></tr>
+<tr>
+<td>~&gt;
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr></tbody></table>
+<h1><span class="mw-headline" id="Sound.Tidal.Control">Sound.Tidal.Control</span></h1>
+<table class="wikitable sortable">
+<tbody><tr>
+<th>Function
+</th>
+<th>Type
+</th>
+<th>Marked
+</th></tr>
+<tr>
+<td><a href="cF.html" title="cF">_cF</a>
+</td>
+<td><code>[Double] -&gt; String -&gt; Pattern Double</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cP&amp;action=edit&amp;redlink=1" class="new" title="cP (page does not exist)">_cP</a>
+</td>
+<td><code>(Enumerable a, Parseable a) =&gt; [Pattern a] -&gt; String -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cS&amp;action=edit&amp;redlink=1" class="new" title="cS (page does not exist)">_cS</a>
+</td>
+<td><code>[String] -&gt; String -&gt; Pattern String</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cX&amp;action=edit&amp;redlink=1" class="new" title="cX (page does not exist)">_cX</a>
+</td>
+<td><code>(Arc -&gt; Value -&gt; [Event a]) -&gt; [a] -&gt; String -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="chop.html" title="chop">_chop</a>
+</td>
+<td><code>Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="gap.html" title="gap">_gap</a>
+</td>
+<td><code>Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="slice.html" title="slice">_slice</a>
+</td>
+<td><code>Int -&gt; Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="spin.html" title="spin">_spin</a>
+</td>
+<td><code>Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="striate.html" title="striate">_striate</a>
+</td>
+<td><code>Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="striateBy.html" class="mw-redirect" title="striateBy">_striateBy</a>
+</td>
+<td><code>Int -&gt; Double -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="stut.html" title="stut">_stut</a>
+</td>
+<td><code>Integer -&gt; Double -&gt; Rational -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="stutWith.html" class="mw-redirect" title="stutWith">_stutWith</a>
+</td>
+<td><code>(Num n, Ord n) =&gt; n -&gt; Time -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="cF.html" title="cF">cF</a>
+</td>
+<td><code>Double -&gt; String -&gt; Pattern Double</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cF0&amp;action=edit&amp;redlink=1" class="new" title="cF0 (page does not exist)">cF0</a>
+</td>
+<td><code>String -&gt; Pattern Double</code>
+</td></tr>
+<tr>
+<td><a href="cF.html" title="cF">cF_</a>
+</td>
+<td><code>String -&gt; Pattern Double</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cI&amp;action=edit&amp;redlink=1" class="new" title="cI (page does not exist)">cI</a>
+</td>
+<td><code>String -&gt; Pattern Int</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cP&amp;action=edit&amp;redlink=1" class="new" title="cP (page does not exist)">cP</a>
+</td>
+<td><code>(Enumerable a, Parseable a) =&gt; Pattern a -&gt; String -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cP&amp;action=edit&amp;redlink=1" class="new" title="cP (page does not exist)">cP_</a>
+</td>
+<td><code>(Enumerable a, Parseable a) =&gt; String -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cR&amp;action=edit&amp;redlink=1" class="new" title="cR (page does not exist)">cR</a>
+</td>
+<td><code>Time -&gt; String -&gt; Pattern Rational</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cR0&amp;action=edit&amp;redlink=1" class="new" title="cR0 (page does not exist)">cR0</a>
+</td>
+<td><code>String -&gt; Pattern Time</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cR&amp;action=edit&amp;redlink=1" class="new" title="cR (page does not exist)">cR_</a>
+</td>
+<td><code>String -&gt; Pattern Time</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cS&amp;action=edit&amp;redlink=1" class="new" title="cS (page does not exist)">cS</a>
+</td>
+<td><code>String -&gt; String -&gt; Pattern String</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cS&amp;action=edit&amp;redlink=1" class="new" title="cS (page does not exist)">cS_</a>
+</td>
+<td><code>String -&gt; Pattern String</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cT&amp;action=edit&amp;redlink=1" class="new" title="cT (page does not exist)">cT</a>
+</td>
+<td><code>Time -&gt; String -&gt; Pattern Time</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cT0&amp;action=edit&amp;redlink=1" class="new" title="cT0 (page does not exist)">cT0</a>
+</td>
+<td><code>String -&gt; Pattern Time</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cT&amp;action=edit&amp;redlink=1" class="new" title="cT (page does not exist)">cT_</a>
+</td>
+<td><code>String -&gt; Pattern Time</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="chop.html" title="chop">chop</a>
+</td>
+<td><code>Pattern Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=chopArc&amp;action=edit&amp;redlink=1" class="new" title="chopArc (page does not exist)">chopArc</a>
+</td>
+<td><code>Arc -&gt; Int -&gt; [Arc]</code>
+</td></tr>
+<tr>
+<td><a href="gap.html" title="gap">gap</a>
+</td>
+<td><code>Pattern Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="hurry.html" title="hurry">hurry</a>
+</td>
+<td><code>Pattern Rational -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=in0&amp;action=edit&amp;redlink=1" class="new" title="in0 (page does not exist)">in0</a>
+</td>
+<td><code>Pattern Double</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=in1&amp;action=edit&amp;redlink=1" class="new" title="in1 (page does not exist)">in1</a>
+</td>
+<td><code>Pattern Double</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td>... up to ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=in127&amp;action=edit&amp;redlink=1" class="new" title="in127 (page does not exist)">in127</a>
+</td>
+<td><code>Pattern Double</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="interlace.html" title="interlace">interlace</a>
+</td>
+<td><code>ControlPattern -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="loopAt.html" title="loopAt">loopAt</a>
+</td>
+<td><code>Pattern Time -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=mergePlayRange&amp;action=edit&amp;redlink=1" class="new" title="mergePlayRange (page does not exist)">mergePlayRange</a>
+</td>
+<td><code>(Double, Double) -&gt; ControlMap -&gt; ControlMap</code>
+</td></tr>
+<tr>
+<td><a href="randslice.html" title="randslice">randslice</a>
+</td>
+<td><code>Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="slice.html" title="slice">slice</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="smash.html" title="smash">smash</a>
+</td>
+<td><code>Pattern Int -&gt; [Pattern Time] -&gt; ControlPattern -&gt; Pattern ControlMap</code>
+</td></tr>
+<tr>
+<td><a href="smash'.html" class="mw-redirect" title="smash'">smash'</a>
+</td>
+<td><code>Int -&gt; [Pattern Time] -&gt; ControlPattern -&gt; Pattern ControlMap</code>
+</td></tr>
+<tr>
+<td><a href="spin.html" title="spin">spin</a>
+</td>
+<td><code>Pattern Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="striate.html" title="striate">striate</a>
+</td>
+<td><code>Pattern Int -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="striate'.html" class="mw-redirect" title="striate'">striate'</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Double -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="striateBy.html" class="mw-redirect" title="striateBy">striateBy</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Double -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="stut.html" title="stut">stut</a>
+</td>
+<td><code>Pattern Integer -&gt; Pattern Double -&gt; Pattern Rational -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="stut'.html" class="mw-redirect" title="stut'">stut'</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Time -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="stutWith.html" class="mw-redirect" title="stutWith">stutWith</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Time -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="weave.html" title="weave">weave</a>
+</td>
+<td><code>Time -&gt; ControlPattern -&gt; [ControlPattern] -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="weave'.html" class="mw-redirect" title="weave'">weave'</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; [Pattern a -&gt; Pattern a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="weaveWith.html" class="mw-redirect" title="weaveWith">weaveWith</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; [Pattern a -&gt; Pattern a] -&gt; Pattern a</code>
+</td></tr></tbody></table>
+<h1><span class="mw-headline" id="Sound.Tidal.UI">Sound.Tidal.UI</span></h1>
+<table class="wikitable sortable">
+<tbody><tr>
+<th>Function
+</th>
+<th>Type
+</th>
+<th>Marked
+</th></tr>
+<tr>
+<td><a href="degradeBy.html" class="mw-redirect" title="degradeBy">_degradeBy</a>
+</td>
+<td><code>Double -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=distrib&amp;action=edit&amp;redlink=1" class="new" title="distrib (page does not exist)">_distrib</a>
+</td>
+<td><code>[Int] -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="euclid.html" title="euclid">_euclid</a>
+</td>
+<td><code>Int -&gt; Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=euclid%27&amp;action=edit&amp;redlink=1" class="new" title="euclid' (page does not exist)">_euclid'</a>
+</td>
+<td><code>Int -&gt; Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=euclidBool&amp;action=edit&amp;redlink=1" class="new" title="euclidBool (page does not exist)">_euclidBool</a>
+</td>
+<td><code>Int -&gt; Int -&gt; Pattern Bool</code>
+</td></tr>
+<tr>
+<td><a href="euclidFull.html" class="mw-redirect" title="euclidFull">_euclidFull</a>
+</td>
+<td><code>Int -&gt; Int -&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="euclidInv.html" class="mw-redirect" title="euclidInv">_euclidInv</a>
+</td>
+<td><code>Int -&gt; Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=euclidOff&amp;action=edit&amp;redlink=1" class="new" title="euclidOff (page does not exist)">_euclidOff</a>
+</td>
+<td><code>Int -&gt; Int -&gt; Integer -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=euclidOffBool&amp;action=edit&amp;redlink=1" class="new" title="euclidOffBool (page does not exist)">_euclidOffBool</a>
+</td>
+<td><code>Int -&gt; Int -&gt; Integer -&gt; Pattern Bool -&gt; Pattern Bool</code>
+</td></tr>
+<tr>
+<td><a href="iter.html" title="iter">_iter</a>
+</td>
+<td><code>Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="iter'.html" class="mw-redirect" title="iter'">_iter'</a>
+</td>
+<td><code>Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="linger.html" title="linger">_linger</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="off.html" title="off">_off</a>
+</td>
+<td><code>Time -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="ply.html" title="ply">_ply</a>
+</td>
+<td><code>Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="range.html" title="range">_range</a>
+</td>
+<td><code>(Functor f, Num b) =&gt; b -&gt; b -&gt; f b -&gt; f b</code>
+</td></tr>
+<tr>
+<td><a href="rot.html" title="rot">_rot</a>
+</td>
+<td><code>Ord a =&gt; Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="segment.html" title="segment">_segment</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="select.html" title="select">_select</a>
+</td>
+<td><code>Double -&gt; [Pattern a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="stripe.html" title="stripe">_stripe</a>
+</td>
+<td><code>Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="trunc.html" title="trunc">_trunc</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="unDegradeBy.html" class="mw-redirect" title="unDegradeBy">_unDegradeBy</a>
+</td>
+<td><code>Double -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="almostAlways.html" class="mw-redirect" title="almostAlways">almostAlways</a>
+</td>
+<td><code>(Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="almostNever.html" class="mw-redirect" title="almostNever">almostNever</a>
+</td>
+<td><code>(Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="always.html" class="mw-redirect" title="always">always</a>
+</td>
+<td><code>(Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="arpeggiate.html" title="arpeggiate">arpeggiate</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="arpg.html" class="mw-redirect" title="arpg">arpg</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="brak.html" title="brak">brak</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="choose.html" title="choose">choose</a>
+</td>
+<td><code>[a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="chooseBy.html" class="mw-redirect" title="chooseBy">chooseBy</a>
+</td>
+<td><code>Pattern Double -&gt; [a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="chunk.html" title="chunk">chunk</a>
+</td>
+<td><code>Integer -&gt; (Pattern b -&gt; Pattern b) -&gt; Pattern b -&gt; Pattern b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="chunk'.html" class="mw-redirect" title="chunk'">chunk'</a>
+</td>
+<td><code>Integral a =&gt; a -&gt; (Pattern b -&gt; Pattern b) -&gt; Pattern b -&gt; Pattern b</code>
+</td></tr>
+<tr>
+<td><a href="contrast.html" title="contrast">contrast</a>
+</td>
+<td><code>(ControlPattern -&gt; ControlPattern) -&gt; (ControlPattern -&gt; ControlPattern) -&gt; ControlPattern -&gt; ControlPattern -&gt; ControlPattern</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=contrastBy&amp;action=edit&amp;redlink=1" class="new" title="contrastBy (page does not exist)">contrastBy</a>
+</td>
+<td><code>(a -&gt; Value -&gt; Bool) -&gt; (ControlPattern -&gt; Pattern b) -&gt; (ControlPattern -&gt; Pattern b) -&gt; Pattern (containers-0.5.7.1:Data.Map.Base.Map String a) -&gt; Pattern (containers-0.5.7.1:Data.Map.Base.Map String Value) -&gt; Pattern b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=contrastRange&amp;action=edit&amp;redlink=1" class="new" title="contrastRange (page does not exist)">contrastRange</a>
+</td>
+<td><code>(ControlPattern -&gt; Pattern a) -&gt; (ControlPattern -&gt; Pattern a) -&gt; Pattern (containers-0.5.7.1:Data.Map.Base.Map String (Value, Value)) -&gt; ControlPattern -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="cycleChoose.html" title="cycleChoose">cycleChoose</a>
+</td>
+<td><code>[a] -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="degrade.html" title="degrade">degrade</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="degradeBy.html" class="mw-redirect" title="degradeBy">degradeBy</a>
+</td>
+<td><code>Pattern Double -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=degradeOverBy&amp;action=edit&amp;redlink=1" class="new" title="degradeOverBy (page does not exist)">degradeOverBy</a>
+</td>
+<td><code>Int -&gt; Pattern Double -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="discretise.html" class="mw-redirect" title="discretise">discretise</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=distrib&amp;action=edit&amp;redlink=1" class="new" title="distrib (page does not exist)">distrib</a>
+</td>
+<td><code>[Pattern Int] -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="double.html" class="mw-redirect" title="double">double</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="echo.html" class="mw-redirect" title="echo">echo</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=enclosingArc&amp;action=edit&amp;redlink=1" class="new" title="enclosingArc (page does not exist)">enclosingArc</a>
+</td>
+<td><code>[Arc] -&gt; Arc</code>
+</td></tr>
+<tr>
+<td><a href="euclid.html" title="euclid">euclid</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Int -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="euclidFull.html" class="mw-redirect" title="euclidFull">euclidFull</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Int -&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="euclidInv.html" class="mw-redirect" title="euclidInv">euclidInv</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Int -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=euclidOff&amp;action=edit&amp;redlink=1" class="new" title="euclidOff (page does not exist)">euclidOff</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Int -&gt; Pattern Integer -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=euclidOffBool&amp;action=edit&amp;redlink=1" class="new" title="euclidOffBool (page does not exist)">euclidOffBool</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern Int -&gt; Pattern Integer -&gt; Pattern Bool -&gt; Pattern Bool</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=fadeIn&amp;action=edit&amp;redlink=1" class="new" title="fadeIn (page does not exist)">fadeIn</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=fadeInFrom&amp;action=edit&amp;redlink=1" class="new" title="fadeInFrom (page does not exist)">fadeInFrom</a>
+</td>
+<td><code>Time -&gt; Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=fadeOut&amp;action=edit&amp;redlink=1" class="new" title="fadeOut (page does not exist)">fadeOut</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=fadeOutFrom&amp;action=edit&amp;redlink=1" class="new" title="fadeOutFrom (page does not exist)">fadeOutFrom</a>
+</td>
+<td><code>Time -&gt; Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="fastspread.html" class="mw-redirect" title="fastspread">fastspread</a>
+</td>
+<td><code>(a -&gt; t -&gt; Pattern b) -&gt; [a] -&gt; t -&gt; Pattern b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="fit.html" title="fit">fit</a>
+</td>
+<td><code>Int -&gt; [a] -&gt; Pattern Int -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fit'.html" class="mw-redirect" title="fit'">fit'</a>
+</td>
+<td><code>Pattern Time -&gt; Int -&gt; Pattern Int -&gt; Pattern Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fix.html" title="fix">fix</a>
+</td>
+<td><code>(ControlPattern -&gt; ControlPattern) -&gt; ControlPattern -&gt; ControlPattern -&gt; ControlPattern</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=fixRange&amp;action=edit&amp;redlink=1" class="new" title="fixRange (page does not exist)">fixRange</a>
+</td>
+<td><code>(ControlPattern -&gt; Pattern ControlMap) -&gt; Pattern (containers-0.5.7.1:Data.Map.Base.Map String (Value, Value)) -&gt; ControlPattern -&gt; Pattern ControlMap</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="flatpat.html" title="flatpat">flatpat</a>
+</td>
+<td><code>Pattern [a] -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="ghost.html" title="ghost">ghost</a>
+</td>
+<td><code>Pattern ControlMap -&gt; Pattern ControlMap</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=ghost%27&amp;action=edit&amp;redlink=1" class="new" title="ghost' (page does not exist)">ghost'</a>
+</td>
+<td><code>Time -&gt; Pattern ControlMap -&gt; Pattern ControlMap</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=ghost%27%27&amp;action=edit&amp;redlink=1" class="new" title="ghost'' (page does not exist)">ghost''</a>
+</td>
+<td><code>Time -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="ifp.html" title="ifp">ifp</a>
+</td>
+<td><code>(Int -&gt; Bool) -&gt; (Pattern a -&gt; Pattern a) -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=index&amp;action=edit&amp;redlink=1" class="new" title="index (page does not exist)">index</a>
+</td>
+<td><code>Real b =&gt; b -&gt; Pattern b -&gt; Pattern c -&gt; Pattern c</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=inhabit&amp;action=edit&amp;redlink=1" class="new" title="inhabit (page does not exist)">inhabit</a>
+</td>
+<td><code>[(String, Pattern a)] -&gt; Pattern String -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="inside.html" title="inside">inside</a>
+</td>
+<td><code>Pattern Time -&gt; (Pattern a1 -&gt; Pattern a) -&gt; Pattern a1 -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="inv.html" title="inv">inv</a>
+</td>
+<td><code>Functor f =&gt; f Bool -&gt; f Bool</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="irand.html" class="mw-redirect" title="irand">irand</a>
+</td>
+<td><code>Num a =&gt; Int -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="iter.html" title="iter">iter</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern c -&gt; Pattern c</code>
+</td></tr>
+<tr>
+<td><a href="iter'.html" class="mw-redirect" title="iter'">iter'</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern c -&gt; Pattern c</code>
+</td></tr>
+<tr>
+<td><a href="jux.html" title="jux">jux</a>
+</td>
+<td><code>(Pattern ControlMap -&gt; Pattern ControlMap) -&gt; Pattern ControlMap -&gt; Pattern ControlMap</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=jux%27&amp;action=edit&amp;redlink=1" class="new" title="jux' (page does not exist)">jux'</a>
+</td>
+<td><code>[t -&gt; Pattern ControlMap] -&gt; t -&gt; Pattern ControlMap</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=jux4&amp;action=edit&amp;redlink=1" class="new" title="jux4 (page does not exist)">jux4</a>
+</td>
+<td><code>(Pattern ControlMap -&gt; Pattern ControlMap) -&gt; Pattern ControlMap -&gt; Pattern ControlMap</code>
+</td>
+<td>remove?
+</td></tr>
+<tr>
+<td><a href="juxBy.html" class="mw-redirect" title="juxBy">juxBy</a>
+</td>
+<td><code>Pattern Double -&gt; (Pattern ControlMap -&gt; Pattern ControlMap) -&gt; Pattern ControlMap -&gt; Pattern ControlMap</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=juxcut&amp;action=edit&amp;redlink=1" class="new" title="juxcut (page does not exist)">juxcut</a>
+</td>
+<td><code>(Pattern ControlMap -&gt; Pattern ControlMap) -&gt; Pattern ControlMap -&gt; Pattern ControlMap</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=juxcut%27&amp;action=edit&amp;redlink=1" class="new" title="juxcut' (page does not exist)">juxcut'</a>
+</td>
+<td><code>[t -&gt; Pattern ControlMap] -&gt; t -&gt; Pattern ControlMap</code>
+</td></tr>
+<tr>
+<td><a href="layer.html" title="layer">layer</a>
+</td>
+<td><code>[a -&gt; Pattern b] -&gt; a -&gt; Pattern b</code>
+</td></tr>
+<tr>
+<td><a href="lindenmayer.html" title="lindenmayer">lindenmayer</a>
+</td>
+<td><code>Int -&gt; String -&gt; String -&gt; String</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=lindenmayerI&amp;action=edit&amp;redlink=1" class="new" title="lindenmayerI (page does not exist)">lindenmayerI</a>
+</td>
+<td><code>Num b =&gt; Int -&gt; String -&gt; String -&gt; [b]</code>
+</td></tr>
+<tr>
+<td><a href="linger.html" title="linger">linger</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="loopFirst.html" title="loopFirst">loopFirst</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="mask.html" title="mask">mask</a>
+</td>
+<td><code>Pattern Bool -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="never.html" class="mw-redirect" title="never">never</a>
+</td>
+<td><code>(Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="off.html" title="off">off</a>
+</td>
+<td><code>Pattern Time -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=offadd&amp;action=edit&amp;redlink=1" class="new" title="offadd (page does not exist)">offadd</a>
+</td>
+<td><code>Num a =&gt; Pattern Time -&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>deprecate?
+</td></tr>
+<tr>
+<td><a href="often.html" class="mw-redirect" title="often">often</a>
+</td>
+<td><code>(Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="outside.html" class="mw-redirect" title="outside">outside</a>
+</td>
+<td><code>Pattern Time -&gt; (Pattern a1 -&gt; Pattern a) -&gt; Pattern a1 -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="palindrome.html" title="palindrome">palindrome</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=parseLMRule&amp;action=edit&amp;redlink=1" class="new" title="parseLMRule (page does not exist)">parseLMRule</a>
+</td>
+<td><code>String -&gt; [(String, String)]</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=parseLMRule%27&amp;action=edit&amp;redlink=1" class="new" title="parseLMRule' (page does not exist)">parseLMRule'</a>
+</td>
+<td><code>String -&gt; [(Char, String)]</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=permstep&amp;action=edit&amp;redlink=1" class="new" title="permstep (page does not exist)">permstep</a>
+</td>
+<td><code>RealFrac b =&gt; Int -&gt; [a] -&gt; Pattern b -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=pick&amp;action=edit&amp;redlink=1" class="new" title="pick (page does not exist)">pick</a>
+</td>
+<td><code>String -&gt; Int -&gt; String</code>
+</td>
+<td>deprecate?
+</td></tr>
+<tr>
+<td><a href="ply.html" title="ply">ply</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="quad.html" class="mw-redirect" title="quad">quad</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="quantise.html" title="quantise">quantise</a>
+</td>
+<td><code>(Functor f, RealFrac b) =&gt; b -&gt; f b -&gt; f b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="rand.html" title="rand">rand</a>
+</td>
+<td><code>Fractional a =&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=randArcs&amp;action=edit&amp;redlink=1" class="new" title="randArcs (page does not exist)">randArcs</a>
+</td>
+<td><code>Int -&gt; Pattern [Arc]</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=randStruct&amp;action=edit&amp;redlink=1" class="new" title="randStruct (page does not exist)">randStruct</a>
+</td>
+<td><code>Int -&gt; Pattern Int</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="randcat.html" title="randcat">randcat</a>
+</td>
+<td><code>[Pattern a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="range.html" title="range">range</a>
+</td>
+<td><code>Num a =&gt; Pattern a -&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="rangex.html" class="mw-redirect" title="rangex">rangex</a>
+</td>
+<td><code>(Functor f, Floating b) =&gt; b -&gt; b -&gt; f b -&gt; f b</code>
+</td></tr>
+<tr>
+<td><a href="rarely.html" class="mw-redirect" title="rarely">rarely</a>
+</td>
+<td><code>(Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=revArc&amp;action=edit&amp;redlink=1" class="new" title="revArc (page does not exist)">revArc</a>
+</td>
+<td><code>Arc -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="rot.html" title="rot">rot</a>
+</td>
+<td><code>Ord a =&gt; Pattern Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="runWith.html" class="mw-redirect" title="runWith">runWith</a>
+</td>
+<td><code>Integer -&gt; (Pattern b -&gt; Pattern b) -&gt; Pattern b -&gt; Pattern b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="runWith'.html" class="mw-redirect" title="runWith'">runWith'</a>
+</td>
+<td><code>Integral a =&gt; a -&gt; (Pattern b -&gt; Pattern b) -&gt; Pattern b -&gt; Pattern b</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=samples&amp;action=edit&amp;redlink=1" class="new" title="samples (page does not exist)">samples</a>
+</td>
+<td><code>Applicative f =&gt; f String -&gt; f Int -&gt; f String</code>
+</td>
+<td>deprecate?
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=samples%27&amp;action=edit&amp;redlink=1" class="new" title="samples' (page does not exist)">samples'</a>
+</td>
+<td><code>Applicative f =&gt; f String -&gt; f Int -&gt; f String</code>
+</td></tr>
+<tr>
+<td><a href="scramble.html" title="scramble">scramble</a>
+</td>
+<td><code>Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="segment.html" title="segment">segment</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="select.html" title="select">select</a>
+</td>
+<td><code>Pattern Double -&gt; [Pattern a] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="seqP.html" title="seqP">seqP</a>
+</td>
+<td><code>[(Time, Time, Pattern a)] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="seqPLoop.html" class="mw-redirect" title="seqPLoop">seqPLoop</a>
+</td>
+<td><code>[(Time, Time, Pattern a)] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="sew.html" title="sew">sew</a>
+</td>
+<td><code>Pattern Bool -&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="stitch.html" title="stitch">stitch</a>
+</td>
+<td><code>Pattern Bool -&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="shuffle.html" title="shuffle">shuffle</a>
+</td>
+<td><code>Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="slowspread.html" class="mw-redirect" title="slowspread">slowspread</a>
+</td>
+<td><code>(a -&gt; t -&gt; Pattern b) -&gt; [a] -&gt; t -&gt; Pattern b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="slowstripe.html" class="mw-redirect" title="slowstripe">slowstripe</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="someCycles.html" title="someCycles">someCycles</a>
+</td>
+<td><code>(Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="someCyclesBy.html" class="mw-redirect" title="someCyclesBy">someCyclesBy</a>
+</td>
+<td><code>Double -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="somecycles.html" class="mw-redirect" title="somecycles">somecycles</a>
+</td>
+<td><code>(Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="somecyclesBy.html" class="mw-redirect" title="somecyclesBy">somecyclesBy</a>
+</td>
+<td><code>Double -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="sometimes.html" title="sometimes">sometimes</a>
+</td>
+<td><code>(Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="sometimesBy.html" class="mw-redirect" title="sometimesBy">sometimesBy</a>
+</td>
+<td><code>Pattern Double -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=spaceOut&amp;action=edit&amp;redlink=1" class="new" title="spaceOut (page does not exist)">spaceOut</a>
+</td>
+<td><code>[Time] -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="spread.html" title="spread">spread</a>
+</td>
+<td><code>(a -&gt; t -&gt; Pattern b) -&gt; [a] -&gt; t -&gt; Pattern b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=spread%27&amp;action=edit&amp;redlink=1" class="new" title="spread' (page does not exist)">spread'</a>
+</td>
+<td><code>Monad m =&gt; (a -&gt; b -&gt; m c) -&gt; m a -&gt; b -&gt; m c</code>
+</td></tr>
+<tr>
+<td><a href="spreadChoose.html" class="mw-redirect" title="spreadChoose">spreadChoose</a>
+</td>
+<td><code>(t -&gt; t1 -&gt; Pattern b) -&gt; [t] -&gt; t1 -&gt; Pattern b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="spreadf.html" class="mw-redirect" title="spreadf">spreadf</a>
+</td>
+<td><code>[a -&gt; Pattern b] -&gt; a -&gt; Pattern b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="spreadr.html" class="mw-redirect" title="spreadr">spreadr</a>
+</td>
+<td><code>(t -&gt; t1 -&gt; Pattern b) -&gt; [t] -&gt; t1 -&gt; Pattern b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=stackwith&amp;action=edit&amp;redlink=1" class="new" title="stackwith (page does not exist)">stackwith</a>
+</td>
+<td><code>Sound.Tidal.Context.Unionable a =&gt; Pattern a -&gt; [Pattern a] -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="step.html" title="step">step</a>
+</td>
+<td><code>String -&gt; String -&gt; Pattern String</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="step'.html" class="mw-redirect" title="step'">step'</a>
+</td>
+<td><code>[String] -&gt; String -&gt; Pattern String</code>
+</td></tr>
+<tr>
+<td><a href="steps.html" class="mw-redirect" title="steps">steps</a>
+</td>
+<td><code>[(String, String)] -&gt; Pattern String</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=stretch&amp;action=edit&amp;redlink=1" class="new" title="stretch (page does not exist)">stretch</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="stripe.html" title="stripe">stripe</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="struct.html" title="struct">struct</a>
+</td>
+<td><code>Pattern Bool -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="stutter.html" title="stutter">stutter</a>
+</td>
+<td><code>Integral i =&gt; i -&gt; Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=substruct&amp;action=edit&amp;redlink=1" class="new" title="substruct (page does not exist)">substruct</a>
+</td>
+<td><code>Pattern String -&gt; Pattern b -&gt; Pattern b</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=substruct%27&amp;action=edit&amp;redlink=1" class="new" title="substruct' (page does not exist)">substruct'</a>
+</td>
+<td><code>Pattern Int -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="superimpose.html" title="superimpose">superimpose</a>
+</td>
+<td><code>(Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="swing.html" class="mw-redirect" title="swing">swing</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="swingBy.html" title="swingBy">swingBy</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=tabby&amp;action=edit&amp;redlink=1" class="new" title="tabby (page does not exist)">tabby</a>
+</td>
+<td><code>Integer -&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=timeLoop&amp;action=edit&amp;redlink=1" class="new" title="timeLoop (page does not exist)">timeLoop</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=timeToRand&amp;action=edit&amp;redlink=1" class="new" title="timeToRand (page does not exist)">timeToRand</a>
+</td>
+<td><code>RealFrac a =&gt; a -&gt; Double</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="toScale.html" class="mw-redirect" title="toScale">toScale</a>
+</td>
+<td><code>Num a =&gt; [a] -&gt; Pattern Int -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=toScale%27&amp;action=edit&amp;redlink=1" class="new" title="toScale' (page does not exist)">toScale'</a>
+</td>
+<td><code>Num a =&gt; Int -&gt; [a] -&gt; Pattern Int -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="triple.html" class="mw-redirect" title="triple">triple</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="trunc.html" title="trunc">trunc</a>
+</td>
+<td><code>Pattern Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="unDegradeBy.html" class="mw-redirect" title="unDegradeBy">unDegradeBy</a>
+</td>
+<td><code>Pattern Double -&gt; Pattern a -&gt; Pattern a</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="unfix.html" class="mw-redirect" title="unfix">unfix</a>
+</td>
+<td><code>(ControlPattern -&gt; ControlPattern) -&gt; ControlPattern -&gt; ControlPattern -&gt; ControlPattern</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=unfixRange&amp;action=edit&amp;redlink=1" class="new" title="unfixRange (page does not exist)">unfixRange</a>
+</td>
+<td><code>(ControlPattern -&gt; Pattern ControlMap) -&gt; Pattern(containers-0.5.7.1:Data.Map.Base.Map String (Value, Value)) -&gt; ControlPattern -&gt; Pattern ControlMap</code>
+</td>
+<td>TODO
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=unwrap%27&amp;action=edit&amp;redlink=1" class="new" title="unwrap' (page does not exist)">unwrap'</a>
+</td>
+<td><code>Pattern (Pattern a) -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="ur.html" title="ur">ur</a>
+</td>
+<td><code>Time -&gt; Pattern String -&gt; [(String, Pattern a)] -&gt; [(String, Pattern a -&gt; Pattern a)] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="wchoose.html" class="mw-redirect" title="wchoose">wchoose</a>
+</td>
+<td><code>[(a, Double)] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="wchooseBy.html" class="mw-redirect" title="wchooseBy">wchooseBy</a>
+</td>
+<td><code>Pattern Double -&gt; [(a, Double)] -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="wedge.html" title="wedge">wedge</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="whenmod.html" title="whenmod">whenmod</a>
+</td>
+<td><code>Int -&gt; Int -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="within.html" title="within">within</a>
+</td>
+<td><code>Arc -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=within%27&amp;action=edit&amp;redlink=1" class="new" title="within' (page does not exist)">within'</a>
+</td>
+<td><code>Arc -&gt; (Pattern a -&gt; Pattern a) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr></tbody></table>
+<p><br>
+</p>
+<h1><span class="mw-headline" id="Sound.Tidal.Pattern">Sound.Tidal.Pattern</span></h1>
+<p>I think all the below are fine as 'internal use only' <a href="./User:Yaxu.html" title="User:Yaxu">Yaxu</a> (<a href="./index.php%3Ftitle=User_talk:Yaxu&amp;action=edit&amp;redlink=1.html" class="new" title="User talk:Yaxu (page does not exist)">talk</a>) 21:33, 5 December 2018 (UTC)
+</p>
+<table class="wikitable sortable">
+<tbody><tr>
+<th>Function
+</th>
+<th>Type
+</th>
+<th>Marked
+</th></tr>
+<tr>
+<td>(*&gt;)
+</td>
+<td><code>Pattern (a -&gt; b) -&gt; Pattern a -&gt; Pattern b</code>
+</td></tr>
+<tr>
+<td>(&lt;*)
+</td>
+<td><code>Pattern (a -&gt; b) -&gt; Pattern a -&gt; Pattern b</code>
+</td></tr>
+<tr>
+<td><a href="compress.html" title="compress">__compress</a>
+</td>
+<td><code>Arc -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=compressTo&amp;action=edit&amp;redlink=1" class="new" title="compressTo (page does not exist)">__compressTo</a>
+</td>
+<td><code>Arc -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="fastGap.html" title="fastGap">_fastGap</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=applyFIS&amp;action=edit&amp;redlink=1" class="new" title="applyFIS (page does not exist)">applyFIS</a>
+</td>
+<td><code>(Double -&gt; Double) -&gt; (Int -&gt; Int) -&gt; (String -&gt; String) -&gt; Value -&gt; Value</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=arcCycles&amp;action=edit&amp;redlink=1" class="new" title="arcCycles (page does not exist)">arcCycles</a>
+</td>
+<td><code>Arc -&gt; [Arc]</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=arcCyclesZW&amp;action=edit&amp;redlink=1" class="new" title="arcCyclesZW (page does not exist)">arcCyclesZW</a>
+</td>
+<td><code>Arc -&gt; [Arc]</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=compareDefrag&amp;action=edit&amp;redlink=1" class="new" title="compareDefrag (page does not exist)">compareDefrag</a>
+</td>
+<td><code>(Eq a, Ord a) =&gt; [Event a] -&gt; [Event a] -&gt; Bool</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cycleArcsInArc&amp;action=edit&amp;redlink=1" class="new" title="cycleArcsInArc (page does not exist)">cycleArcsInArc</a>
+</td>
+<td><code>Arc -&gt; [Arc]</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cyclePos&amp;action=edit&amp;redlink=1" class="new" title="cyclePos (page does not exist)">cyclePos</a>
+</td>
+<td><code>Time -&gt; Time</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=cyclesInArc&amp;action=edit&amp;redlink=1" class="new" title="cyclesInArc (page does not exist)">cyclesInArc</a>
+</td>
+<td><code>Integral a =&gt; Arc -&gt; [a]</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=defragParts&amp;action=edit&amp;redlink=1" class="new" title="defragParts (page does not exist)">defragParts</a>
+</td>
+<td><code>Eq a =&gt; [Event a] -&gt; [Event a]</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=empty&amp;action=edit&amp;redlink=1" class="new" title="empty (page does not exist)">empty</a>
+</td>
+<td><code>Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=eventHasOnset&amp;action=edit&amp;redlink=1" class="new" title="eventHasOnset (page does not exist)">eventHasOnset</a>
+</td>
+<td><code>Event a -&gt; Bool</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=eventPart&amp;action=edit&amp;redlink=1" class="new" title="eventPart (page does not exist)">eventPart</a>
+</td>
+<td><code>Event a -&gt; Arc</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=eventValue&amp;action=edit&amp;redlink=1" class="new" title="eventValue (page does not exist)">eventValue</a>
+</td>
+<td><code>Event a -&gt; a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=eventWhole&amp;action=edit&amp;redlink=1" class="new" title="eventWhole (page does not exist)">eventWhole</a>
+</td>
+<td><code>Event a -&gt; Arc</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=eventWholeOnset&amp;action=edit&amp;redlink=1" class="new" title="eventWholeOnset (page does not exist)">eventWholeOnset</a>
+</td>
+<td><code>Event a -&gt; Time</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=fNum2&amp;action=edit&amp;redlink=1" class="new" title="fNum2 (page does not exist)">fNum2</a>
+</td>
+<td><code>(Int -&gt; Int -&gt; Int) -&gt; (Double -&gt; Double -&gt; Double) -&gt; Value -&gt; Value -&gt; Value</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=filterJust&amp;action=edit&amp;redlink=1" class="new" title="filterJust (page does not exist)">filterJust</a>
+</td>
+<td><code>Pattern (Maybe a) -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=filterValues&amp;action=edit&amp;redlink=1" class="new" title="filterValues (page does not exist)">filterValues</a>
+</td>
+<td><code>(a -&gt; Bool) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=filterWhen&amp;action=edit&amp;redlink=1" class="new" title="filterWhen (page does not exist)">filterWhen</a>
+</td>
+<td><code>(Time -&gt; Bool) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=getF&amp;action=edit&amp;redlink=1" class="new" title="getF (page does not exist)">getF</a>
+</td>
+<td><code>Value -&gt; Maybe Double</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=getI&amp;action=edit&amp;redlink=1" class="new" title="getI (page does not exist)">getI</a>
+</td>
+<td><code>Value -&gt; Maybe Int</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=getS&amp;action=edit&amp;redlink=1" class="new" title="getS (page does not exist)">getS</a>
+</td>
+<td><code>Value -&gt; Maybe String</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=innerJoin&amp;action=edit&amp;redlink=1" class="new" title="innerJoin (page does not exist)">innerJoin</a>
+</td>
+<td><code>Pattern (Pattern a) -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=isAdjacent&amp;action=edit&amp;redlink=1" class="new" title="isAdjacent (page does not exist)">isAdjacent</a>
+</td>
+<td><code>Eq a =&gt; Event a -&gt; Event a -&gt; Bool</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=isAnalog&amp;action=edit&amp;redlink=1" class="new" title="isAnalog (page does not exist)">isAnalog</a>
+</td>
+<td><code>Pattern a -&gt; Bool</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=isDigital&amp;action=edit&amp;redlink=1" class="new" title="isDigital (page does not exist)">isDigital</a>
+</td>
+<td><code>Pattern a -&gt; Bool</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=isIn&amp;action=edit&amp;redlink=1" class="new" title="isIn (page does not exist)">isIn</a>
+</td>
+<td><code>Arc -&gt; Time -&gt; Bool</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=mapArc&amp;action=edit&amp;redlink=1" class="new" title="mapArc (page does not exist)">mapArc</a>
+</td>
+<td><code>(Time -&gt; Time) -&gt; Arc -&gt; Arc</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=mapCycle&amp;action=edit&amp;redlink=1" class="new" title="mapCycle (page does not exist)">mapCycle</a>
+</td>
+<td><code>(Time -&gt; Time) -&gt; Arc -&gt; Arc</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=matchManyToOne&amp;action=edit&amp;redlink=1" class="new" title="matchManyToOne (page does not exist)">matchManyToOne</a>
+</td>
+<td><code></code>  (b -&gt; a -&gt; Bool) -&gt; Pattern a -&gt; Pattern b -&gt; Pattern (Bool, b)
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=nextSam&amp;action=edit&amp;redlink=1" class="new" title="nextSam (page does not exist)">nextSam</a>
+</td>
+<td><code>Time -&gt; Time</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=noOv&amp;action=edit&amp;redlink=1" class="new" title="noOv (page does not exist)">noOv</a>
+</td>
+<td><code>String -&gt; a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=onsetIn&amp;action=edit&amp;redlink=1" class="new" title="onsetIn (page does not exist)">onsetIn</a>
+</td>
+<td><code>Arc -&gt; Event a -&gt; Bool</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=outerJoin&amp;action=edit&amp;redlink=1" class="new" title="outerJoin (page does not exist)">outerJoin</a>
+</td>
+<td><code>Pattern (Pattern a) -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=playFor&amp;action=edit&amp;redlink=1" class="new" title="playFor (page does not exist)">playFor</a>
+</td>
+<td><code>Time -&gt; Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=prettyRat&amp;action=edit&amp;redlink=1" class="new" title="prettyRat (page does not exist)">prettyRat</a>
+</td>
+<td><code>Rational -&gt; String</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=queryArc&amp;action=edit&amp;redlink=1" class="new" title="queryArc (page does not exist)">queryArc</a>
+</td>
+<td><code>Pattern a -&gt; Arc -&gt; [Event a]</code>
+</td></tr>
+<tr>
+<td><a href="rotL.html" title="rotL">rotL</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="rotR.html" class="mw-redirect" title="rotR">rotR</a>
+</td>
+<td><code>Time -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=sam&amp;action=edit&amp;redlink=1" class="new" title="sam (page does not exist)">sam</a>
+</td>
+<td><code>Time -&gt; Time</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=showFrac&amp;action=edit&amp;redlink=1" class="new" title="showFrac (page does not exist)">showFrac</a>
+</td>
+<td><code>Integer -&gt; Integer -&gt; String</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=showPattern&amp;action=edit&amp;redlink=1" class="new" title="showPattern (page does not exist)">showPattern</a>
+</td>
+<td><code>Show a =&gt; Arc -&gt; Pattern a -&gt; String</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=splitQueries&amp;action=edit&amp;redlink=1" class="new" title="splitQueries (page does not exist)">splitQueries</a>
+</td>
+<td><code>Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=subArc&amp;action=edit&amp;redlink=1" class="new" title="subArc (page does not exist)">subArc</a>
+</td>
+<td><code>Arc -&gt; Arc -&gt; Maybe Arc</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=tParam&amp;action=edit&amp;redlink=1" class="new" title="tParam (page does not exist)">tParam</a>
+</td>
+<td><code>(t1 -&gt; t2 -&gt; Pattern a) -&gt; Pattern t1 -&gt; t2 -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=tParam2&amp;action=edit&amp;redlink=1" class="new" title="tParam2 (page does not exist)">tParam2</a>
+</td>
+<td><code>(a -&gt; b -&gt; c -&gt; Pattern d) -&gt; Pattern a -&gt; Pattern b -&gt; c -&gt; Pattern d</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=tParam3&amp;action=edit&amp;redlink=1" class="new" title="tParam3 (page does not exist)">tParam3</a>
+</td>
+<td><code>(a -&gt; b -&gt; c -&gt; Pattern d -&gt; Pattern e) -&gt; Pattern a -&gt; Pattern b -&gt; Pattern c -&gt; Pattern d -&gt; Pattern e</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=tParamSqueeze&amp;action=edit&amp;redlink=1" class="new" title="tParamSqueeze (page does not exist)">tParamSqueeze</a>
+</td>
+<td><code>(a -&gt; Pattern b -&gt; Pattern c) -&gt; Pattern a -&gt; Pattern b -&gt; Pattern c</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=timeToCycleArc&amp;action=edit&amp;redlink=1" class="new" title="timeToCycleArc (page does not exist)">timeToCycleArc</a>
+</td>
+<td><code>Time -&gt; Arc</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=toTime&amp;action=edit&amp;redlink=1" class="new" title="toTime (page does not exist)">toTime</a>
+</td>
+<td><code>Real a =&gt; a -&gt; Rational</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=unwrap&amp;action=edit&amp;redlink=1" class="new" title="unwrap (page does not exist)">unwrap</a>
+</td>
+<td><code>Pattern (Pattern a) -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=unwrapSqueeze&amp;action=edit&amp;redlink=1" class="new" title="unwrapSqueeze (page does not exist)">unwrapSqueeze</a>
+</td>
+<td><code>Pattern (Pattern a) -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=withEvent&amp;action=edit&amp;redlink=1" class="new" title="withEvent (page does not exist)">withEvent</a>
+</td>
+<td><code>(Event a -&gt; Event b) -&gt; Pattern a -&gt; Pattern b</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=withEvents&amp;action=edit&amp;redlink=1" class="new" title="withEvents (page does not exist)">withEvents</a>
+</td>
+<td><code>([Event a] -&gt; [Event b]) -&gt; Pattern a -&gt; Pattern b</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=withPart&amp;action=edit&amp;redlink=1" class="new" title="withPart (page does not exist)">withPart</a>
+</td>
+<td><code>(Arc -&gt; Arc) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=withQueryArc&amp;action=edit&amp;redlink=1" class="new" title="withQueryArc (page does not exist)">withQueryArc</a>
+</td>
+<td><code>(Arc -&gt; Arc) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=withQueryTime&amp;action=edit&amp;redlink=1" class="new" title="withQueryTime (page does not exist)">withQueryTime</a>
+</td>
+<td><code>(Time -&gt; Time) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=withResultArc&amp;action=edit&amp;redlink=1" class="new" title="withResultArc (page does not exist)">withResultArc</a>
+</td>
+<td><code>(Arc -&gt; Arc) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr>
+<tr>
+<td><a href="https://userbase.tidalcycles.org/index.php?title=withResultTime&amp;action=edit&amp;redlink=1" class="new" title="withResultTime (page does not exist)">withResultTime</a>
+</td>
+<td><code>(Time -&gt; Time) -&gt; Pattern a -&gt; Pattern a</code>
+</td></tr></tbody></table>
+<h1><span class="mw-headline" id="How_the_above_lists_were_made">How the above lists were made</span></h1><p>
+The ghci <code>:browse</code> command, some by-hand fixing up (removing stray carriage returns), and the following perl one-liner: </p><div class="mw-highlight mw-highlight-lang-shell mw-content-ltr" dir="ltr"><pre><span></span>perl -pe <span class="s1">'s!(.*?)\s*::\s*(.*)!|-\n|[[$1]]\n|&lt;code&gt;$2&lt;/code&gt;!'</span>
+</pre></div>
+<!-- 
+NewPP limit report
+Cached time: 20220320140244
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.154 seconds
+Real time usage: 0.325 seconds
+Preprocessor visited node count: 470/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 345/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key tub-tub_:pcache:idhash:814-0!canonical!groups=* and timestamp 20220320140244 and revision id 7638
+ -->
+</div>

@@ -1,0 +1,353 @@
+Function { name: "#\n", type_signature: "Sound.Tidal.Context.Unionable b => Pattern b -> Pattern b -> Pattern b\n" }
+Function { name: "%|\n", type_signature: "Real a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "*|\n", type_signature: "Num a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "+|\n", type_signature: "Num a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "-|\n", type_signature: "Num a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "/|\n", type_signature: "Fractional a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "<>\n", type_signature: "Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "<|\n", type_signature: "Sound.Tidal.Context.Unionable a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "<~\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: ">|\n", type_signature: "Sound.Tidal.Context.Unionable a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "_every\n", type_signature: "Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "_every'\n", type_signature: "Int -> Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "_fast\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "_run\n", type_signature: "(Enum a, Num a) => a -> Pattern a\n" }
+Function { name: "_scan\n", type_signature: "(Enum a, Num a) => a -> Pattern a\n" }
+Function { name: "_slow\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "append\n", type_signature: "Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "cat\n", type_signature: "[Pattern a] -> Pattern a\n" }
+Function { name: "compress\n", type_signature: "Arc -> Pattern a -> Pattern a\n" }
+Function { name: "compressTo\n", type_signature: "Arc -> Pattern a -> Pattern a\n" }
+Function { name: "cosine\n", type_signature: "Fractional a => Pattern a\n" }
+Function { name: "density\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "densityGap\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "envEq\n", type_signature: "Pattern Double\n" }
+Function { name: "envEqR\n", type_signature: "Pattern Double\n" }
+Function { name: "envL\n", type_signature: "Pattern Double\n" }
+Function { name: "envLR\n", type_signature: "Pattern Double\n" }
+Function { name: "every\n", type_signature: "Pattern Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "every'\n", type_signature: "Pattern Int -> Pattern Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "fast\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "fastAppend\n", type_signature: "Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "fastCat\n", type_signature: "[Pattern a] -> Pattern a\n" }
+Function { name: "fastFromList\n", type_signature: "[a] -> Pattern a\n" }
+Function { name: "fastGap\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "fastRepeatCycles\n", type_signature: "Int -> Pattern a -> Pattern a\n" }
+Function { name: "fastSqueeze\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "fastcat\n", type_signature: "[Pattern a] -> Pattern a\n" }
+Function { name: "foldEvery\n", type_signature: "[Int] -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "fromList\n", type_signature: "[a] -> Pattern a\n" }
+Function { name: "fromMaybes\n", type_signature: "[Maybe a] -> Pattern a\n" }
+Function { name: "isaw\n", type_signature: "(Fractional a, Real a) => Pattern a\n" }
+Function { name: "listToPat\n", type_signature: "[a] -> Pattern a\n" }
+Function { name: "overlay\n", type_signature: "Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "repeatCycles\n", type_signature: "Int -> Pattern a -> Pattern a\n" }
+Function { name: "rev\n", type_signature: "Pattern a -> Pattern a\n" }
+Function { name: "run\n", type_signature: "(Enum a, Num a) => Pattern a -> Pattern a\n" }
+Function { name: "saw\n", type_signature: "(Fractional a, Real a) => Pattern a\n" }
+Function { name: "scan\n", type_signature: "(Enum a, Num a) => Pattern a -> Pattern a\n" }
+Function { name: "sig\n", type_signature: "(Time -> a) -> Pattern a\n" }
+Function { name: "silence\n", type_signature: "Pattern a\n" }
+Function { name: "sine\n", type_signature: "Fractional a => Pattern a\n" }
+Function { name: "slow\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "slowAppend\n", type_signature: "Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "slowCat\n", type_signature: "[Pattern a] -> Pattern a\n" }
+Function { name: "slowSqueeze\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "slowcat\n", type_signature: "[Pattern a] -> Pattern a\n" }
+Function { name: "sparsity\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "square\n", type_signature: "(Fractional a, Real a) => Pattern a\n" }
+Function { name: "stack\n", type_signature: "[Pattern a] -> Pattern a\n" }
+Function { name: "timeCat\n", type_signature: "[(Time, Pattern a)] -> Pattern a\n" }
+Function { name: "tri\n", type_signature: "(Fractional a, Real a) => Pattern a\n" }
+Function { name: "when\n", type_signature: "(Int -> Bool) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "whenT\n", type_signature: "(Time -> Bool) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "zoom\n", type_signature: "Arc -> Pattern a -> Pattern a\n" }
+Function { name: "|%\n", type_signature: "Real a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "|%|\n", type_signature: "(Applicative a, Real b) => a b -> a b -> a b\n" }
+Function { name: "|*\n", type_signature: "Num a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "|*|\n", type_signature: "(Applicative a, Num b) => a b -> a b -> a b\n" }
+Function { name: "|+\n", type_signature: "Num a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "|+|\n", type_signature: "(Applicative a, Num b) => a b -> a b -> a b\n" }
+Function { name: "|-\n", type_signature: "Num a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "|-|\n", type_signature: "(Applicative a, Num b) => a b -> a b -> a b\n" }
+Function { name: "|/\n", type_signature: "Fractional a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "|/|\n", type_signature: "(Applicative a, Fractional b) => a b -> a b -> a b\n" }
+Function { name: "|<\n", type_signature: "Sound.Tidal.Context.Unionable a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "|<|\n", type_signature: "(Applicative a, Sound.Tidal.Context.Unionable b) => a b -> a b -> a b\n" }
+Function { name: "|>\n", type_signature: "Sound.Tidal.Context.Unionable a => Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "|>|\n", type_signature: "(Applicative a, Sound.Tidal.Context.Unionable b) => a b -> a b -> a b\n" }
+Function { name: "~>\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "_cF\n", type_signature: "[Double] -> String -> Pattern Double\n" }
+Function { name: "_cP\n", type_signature: "(Enumerable a, Parseable a) => [Pattern a] -> String -> Pattern a\n" }
+Function { name: "_cS\n", type_signature: "[String] -> String -> Pattern String\n" }
+Function { name: "_cX\n", type_signature: "(Arc -> Value -> [Event a]) -> [a] -> String -> Pattern a\n" }
+Function { name: "_chop\n", type_signature: "Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "_gap\n", type_signature: "Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "_slice\n", type_signature: "Int -> Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "_spin\n", type_signature: "Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "_striate\n", type_signature: "Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "_striateBy\n", type_signature: "Int -> Double -> ControlPattern -> ControlPattern\n" }
+Function { name: "_stut\n", type_signature: "Integer -> Double -> Rational -> ControlPattern -> ControlPattern\n" }
+Function { name: "_stutWith\n", type_signature: "(Num n, Ord n) => n -> Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "cF\n", type_signature: "Double -> String -> Pattern Double\n" }
+Function { name: "cF0\n", type_signature: "String -> Pattern Double\n" }
+Function { name: "cF_\n", type_signature: "String -> Pattern Double\n" }
+Function { name: "cI\n", type_signature: "String -> Pattern Int\n" }
+Function { name: "cP\n", type_signature: "(Enumerable a, Parseable a) => Pattern a -> String -> Pattern a\n" }
+Function { name: "cP_\n", type_signature: "(Enumerable a, Parseable a) => String -> Pattern a\n" }
+Function { name: "cR\n", type_signature: "Time -> String -> Pattern Rational\n" }
+Function { name: "cR0\n", type_signature: "String -> Pattern Time\n" }
+Function { name: "cR_\n", type_signature: "String -> Pattern Time\n" }
+Function { name: "cS\n", type_signature: "String -> String -> Pattern String\n" }
+Function { name: "cS_\n", type_signature: "String -> Pattern String\n" }
+Function { name: "cT\n", type_signature: "Time -> String -> Pattern Time\n" }
+Function { name: "cT0\n", type_signature: "String -> Pattern Time\n" }
+Function { name: "cT_\n", type_signature: "String -> Pattern Time\n" }
+Function { name: "chop\n", type_signature: "Pattern Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "chopArc\n", type_signature: "Arc -> Int -> [Arc]\n" }
+Function { name: "gap\n", type_signature: "Pattern Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "hurry\n", type_signature: "Pattern Rational -> ControlPattern -> ControlPattern\n" }
+Function { name: "in0\n", type_signature: "Pattern Double\n" }
+Function { name: "in1\n", type_signature: "Pattern Double\n" }
+Function { name: "... up to ...\n", type_signature: "\n" }
+Function { name: "in127\n", type_signature: "Pattern Double\n" }
+Function { name: "interlace\n", type_signature: "ControlPattern -> ControlPattern -> ControlPattern\n" }
+Function { name: "loopAt\n", type_signature: "Pattern Time -> ControlPattern -> ControlPattern\n" }
+Function { name: "mergePlayRange\n", type_signature: "(Double, Double) -> ControlMap -> ControlMap\n" }
+Function { name: "randslice\n", type_signature: "Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "slice\n", type_signature: "Pattern Int -> Pattern Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "smash\n", type_signature: "Pattern Int -> [Pattern Time] -> ControlPattern -> Pattern ControlMap\n" }
+Function { name: "smash'\n", type_signature: "Int -> [Pattern Time] -> ControlPattern -> Pattern ControlMap\n" }
+Function { name: "spin\n", type_signature: "Pattern Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "striate\n", type_signature: "Pattern Int -> ControlPattern -> ControlPattern\n" }
+Function { name: "striate'\n", type_signature: "Pattern Int -> Pattern Double -> ControlPattern -> ControlPattern\n" }
+Function { name: "striateBy\n", type_signature: "Pattern Int -> Pattern Double -> ControlPattern -> ControlPattern\n" }
+Function { name: "stut\n", type_signature: "Pattern Integer -> Pattern Double -> Pattern Rational -> ControlPattern -> ControlPattern\n" }
+Function { name: "stut'\n", type_signature: "Pattern Int -> Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "stutWith\n", type_signature: "Pattern Int -> Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "weave\n", type_signature: "Time -> ControlPattern -> [ControlPattern] -> ControlPattern\n" }
+Function { name: "weave'\n", type_signature: "Time -> Pattern a -> [Pattern a -> Pattern a] -> Pattern a\n" }
+Function { name: "weaveWith\n", type_signature: "Time -> Pattern a -> [Pattern a -> Pattern a] -> Pattern a\n" }
+Function { name: "_degradeBy\n", type_signature: "Double -> Pattern a -> Pattern a\n" }
+Function { name: "_distrib\n", type_signature: "[Int] -> Pattern a -> Pattern a\n" }
+Function { name: "_euclid\n", type_signature: "Int -> Int -> Pattern a -> Pattern a\n" }
+Function { name: "_euclid'\n", type_signature: "Int -> Int -> Pattern a -> Pattern a\n" }
+Function { name: "_euclidBool\n", type_signature: "Int -> Int -> Pattern Bool\n" }
+Function { name: "_euclidFull\n", type_signature: "Int -> Int -> Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "_euclidInv\n", type_signature: "Int -> Int -> Pattern a -> Pattern a\n" }
+Function { name: "_euclidOff\n", type_signature: "Int -> Int -> Integer -> Pattern a -> Pattern a\n" }
+Function { name: "_euclidOffBool\n", type_signature: "Int -> Int -> Integer -> Pattern Bool -> Pattern Bool\n" }
+Function { name: "_iter\n", type_signature: "Int -> Pattern a -> Pattern a\n" }
+Function { name: "_iter'\n", type_signature: "Int -> Pattern a -> Pattern a\n" }
+Function { name: "_linger\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "_off\n", type_signature: "Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "_ply\n", type_signature: "Int -> Pattern a -> Pattern a\n" }
+Function { name: "_range\n", type_signature: "(Functor f, Num b) => b -> b -> f b -> f b\n" }
+Function { name: "_rot\n", type_signature: "Ord a => Int -> Pattern a -> Pattern a\n" }
+Function { name: "_segment\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "_select\n", type_signature: "Double -> [Pattern a] -> Pattern a\n" }
+Function { name: "_stripe\n", type_signature: "Int -> Pattern a -> Pattern a\n" }
+Function { name: "_trunc\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "_unDegradeBy\n", type_signature: "Double -> Pattern a -> Pattern a\n" }
+Function { name: "almostAlways\n", type_signature: "(Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "almostNever\n", type_signature: "(Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "always\n", type_signature: "(Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "arpeggiate\n", type_signature: "Pattern a -> Pattern a\n" }
+Function { name: "arpg\n", type_signature: "Pattern a -> Pattern a\n" }
+Function { name: "brak\n", type_signature: "Pattern a -> Pattern a\n" }
+Function { name: "choose\n", type_signature: "[a] -> Pattern a\n" }
+Function { name: "chooseBy\n", type_signature: "Pattern Double -> [a] -> Pattern a\n" }
+Function { name: "chunk\n", type_signature: "Integer -> (Pattern b -> Pattern b) -> Pattern b -> Pattern b\n" }
+Function { name: "chunk'\n", type_signature: "Integral a => a -> (Pattern b -> Pattern b) -> Pattern b -> Pattern b\n" }
+Function { name: "contrast\n", type_signature: "(ControlPattern -> ControlPattern) -> (ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern -> ControlPattern\n" }
+Function { name: "contrastBy\n", type_signature: "(a -> Value -> Bool) -> (ControlPattern -> Pattern b) -> (ControlPattern -> Pattern b) -> Pattern (containers-0.5.7.1:Data.Map.Base.Map String a) -> Pattern (containers-0.5.7.1:Data.Map.Base.Map String Value) -> Pattern b\n" }
+Function { name: "contrastRange\n", type_signature: "(ControlPattern -> Pattern a) -> (ControlPattern -> Pattern a) -> Pattern (containers-0.5.7.1:Data.Map.Base.Map String (Value, Value)) -> ControlPattern -> Pattern a\n" }
+Function { name: "cycleChoose\n", type_signature: "[a] -> Pattern a\n" }
+Function { name: "degrade\n", type_signature: "Pattern a -> Pattern a\n" }
+Function { name: "degradeBy\n", type_signature: "Pattern Double -> Pattern a -> Pattern a\n" }
+Function { name: "degradeOverBy\n", type_signature: "Int -> Pattern Double -> Pattern a -> Pattern a\n" }
+Function { name: "discretise\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "distrib\n", type_signature: "[Pattern Int] -> Pattern a -> Pattern a\n" }
+Function { name: "double\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "echo\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "enclosingArc\n", type_signature: "[Arc] -> Arc\n" }
+Function { name: "euclid\n", type_signature: "Pattern Int -> Pattern Int -> Pattern a -> Pattern a\n" }
+Function { name: "euclidFull\n", type_signature: "Pattern Int -> Pattern Int -> Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "euclidInv\n", type_signature: "Pattern Int -> Pattern Int -> Pattern a -> Pattern a\n" }
+Function { name: "euclidOff\n", type_signature: "Pattern Int -> Pattern Int -> Pattern Integer -> Pattern a -> Pattern a\n" }
+Function { name: "euclidOffBool\n", type_signature: "Pattern Int -> Pattern Int -> Pattern Integer -> Pattern Bool -> Pattern Bool\n" }
+Function { name: "fadeIn\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "fadeInFrom\n", type_signature: "Time -> Time -> Pattern a -> Pattern a\n" }
+Function { name: "fadeOut\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "fadeOutFrom\n", type_signature: "Time -> Time -> Pattern a -> Pattern a\n" }
+Function { name: "fastspread\n", type_signature: "(a -> t -> Pattern b) -> [a] -> t -> Pattern b\n" }
+Function { name: "fit\n", type_signature: "Int -> [a] -> Pattern Int -> Pattern a\n" }
+Function { name: "fit'\n", type_signature: "Pattern Time -> Int -> Pattern Int -> Pattern Int -> Pattern a -> Pattern a\n" }
+Function { name: "fix\n", type_signature: "(ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern -> ControlPattern\n" }
+Function { name: "fixRange\n", type_signature: "(ControlPattern -> Pattern ControlMap) -> Pattern (containers-0.5.7.1:Data.Map.Base.Map String (Value, Value)) -> ControlPattern -> Pattern ControlMap\n" }
+Function { name: "flatpat\n", type_signature: "Pattern [a] -> Pattern a\n" }
+Function { name: "ghost\n", type_signature: "Pattern ControlMap -> Pattern ControlMap\n" }
+Function { name: "ghost'\n", type_signature: "Time -> Pattern ControlMap -> Pattern ControlMap\n" }
+Function { name: "ghost''\n", type_signature: "Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "ifp\n", type_signature: "(Int -> Bool) -> (Pattern a -> Pattern a) -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "index\n", type_signature: "Real b => b -> Pattern b -> Pattern c -> Pattern c\n" }
+Function { name: "inhabit\n", type_signature: "[(String, Pattern a)] -> Pattern String -> Pattern a\n" }
+Function { name: "inside\n", type_signature: "Pattern Time -> (Pattern a1 -> Pattern a) -> Pattern a1 -> Pattern a\n" }
+Function { name: "inv\n", type_signature: "Functor f => f Bool -> f Bool\n" }
+Function { name: "irand\n", type_signature: "Num a => Int -> Pattern a\n" }
+Function { name: "iter\n", type_signature: "Pattern Int -> Pattern c -> Pattern c\n" }
+Function { name: "iter'\n", type_signature: "Pattern Int -> Pattern c -> Pattern c\n" }
+Function { name: "jux\n", type_signature: "(Pattern ControlMap -> Pattern ControlMap) -> Pattern ControlMap -> Pattern ControlMap\n" }
+Function { name: "jux'\n", type_signature: "[t -> Pattern ControlMap] -> t -> Pattern ControlMap\n" }
+Function { name: "jux4\n", type_signature: "(Pattern ControlMap -> Pattern ControlMap) -> Pattern ControlMap -> Pattern ControlMap\n" }
+Function { name: "juxBy\n", type_signature: "Pattern Double -> (Pattern ControlMap -> Pattern ControlMap) -> Pattern ControlMap -> Pattern ControlMap\n" }
+Function { name: "juxcut\n", type_signature: "(Pattern ControlMap -> Pattern ControlMap) -> Pattern ControlMap -> Pattern ControlMap\n" }
+Function { name: "juxcut'\n", type_signature: "[t -> Pattern ControlMap] -> t -> Pattern ControlMap\n" }
+Function { name: "layer\n", type_signature: "[a -> Pattern b] -> a -> Pattern b\n" }
+Function { name: "lindenmayer\n", type_signature: "Int -> String -> String -> String\n" }
+Function { name: "lindenmayerI\n", type_signature: "Num b => Int -> String -> String -> [b]\n" }
+Function { name: "linger\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "loopFirst\n", type_signature: "Pattern a -> Pattern a\n" }
+Function { name: "mask\n", type_signature: "Pattern Bool -> Pattern a -> Pattern a\n" }
+Function { name: "never\n", type_signature: "(Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "off\n", type_signature: "Pattern Time -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "offadd\n", type_signature: "Num a => Pattern Time -> Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "often\n", type_signature: "(Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "outside\n", type_signature: "Pattern Time -> (Pattern a1 -> Pattern a) -> Pattern a1 -> Pattern a\n" }
+Function { name: "palindrome\n", type_signature: "Pattern a -> Pattern a\n" }
+Function { name: "parseLMRule\n", type_signature: "String -> [(String, String)]\n" }
+Function { name: "parseLMRule'\n", type_signature: "String -> [(Char, String)]\n" }
+Function { name: "permstep\n", type_signature: "RealFrac b => Int -> [a] -> Pattern b -> Pattern a\n" }
+Function { name: "pick\n", type_signature: "String -> Int -> String\n" }
+Function { name: "ply\n", type_signature: "Pattern Int -> Pattern a -> Pattern a\n" }
+Function { name: "quad\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "quantise\n", type_signature: "(Functor f, RealFrac b) => b -> f b -> f b\n" }
+Function { name: "rand\n", type_signature: "Fractional a => Pattern a\n" }
+Function { name: "randArcs\n", type_signature: "Int -> Pattern [Arc]\n" }
+Function { name: "randStruct\n", type_signature: "Int -> Pattern Int\n" }
+Function { name: "randcat\n", type_signature: "[Pattern a] -> Pattern a\n" }
+Function { name: "range\n", type_signature: "Num a => Pattern a -> Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "rangex\n", type_signature: "(Functor f, Floating b) => b -> b -> f b -> f b\n" }
+Function { name: "rarely\n", type_signature: "(Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "revArc\n", type_signature: "Arc -> Pattern a -> Pattern a\n" }
+Function { name: "rot\n", type_signature: "Ord a => Pattern Int -> Pattern a -> Pattern a\n" }
+Function { name: "runWith\n", type_signature: "Integer -> (Pattern b -> Pattern b) -> Pattern b -> Pattern b\n" }
+Function { name: "runWith'\n", type_signature: "Integral a => a -> (Pattern b -> Pattern b) -> Pattern b -> Pattern b\n" }
+Function { name: "samples\n", type_signature: "Applicative f => f String -> f Int -> f String\n" }
+Function { name: "samples'\n", type_signature: "Applicative f => f String -> f Int -> f String\n" }
+Function { name: "scramble\n", type_signature: "Int -> Pattern a -> Pattern a\n" }
+Function { name: "segment\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "select\n", type_signature: "Pattern Double -> [Pattern a] -> Pattern a\n" }
+Function { name: "seqP\n", type_signature: "[(Time, Time, Pattern a)] -> Pattern a\n" }
+Function { name: "seqPLoop\n", type_signature: "[(Time, Time, Pattern a)] -> Pattern a\n" }
+Function { name: "sew\n", type_signature: "Pattern Bool -> Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "stitch\n", type_signature: "Pattern Bool -> Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "shuffle\n", type_signature: "Int -> Pattern a -> Pattern a\n" }
+Function { name: "slowspread\n", type_signature: "(a -> t -> Pattern b) -> [a] -> t -> Pattern b\n" }
+Function { name: "slowstripe\n", type_signature: "Pattern Int -> Pattern a -> Pattern a\n" }
+Function { name: "someCycles\n", type_signature: "(Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "someCyclesBy\n", type_signature: "Double -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "somecycles\n", type_signature: "(Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "somecyclesBy\n", type_signature: "Double -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "sometimes\n", type_signature: "(Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "sometimesBy\n", type_signature: "Pattern Double -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "spaceOut\n", type_signature: "[Time] -> Pattern a -> Pattern a\n" }
+Function { name: "spread\n", type_signature: "(a -> t -> Pattern b) -> [a] -> t -> Pattern b\n" }
+Function { name: "spread'\n", type_signature: "Monad m => (a -> b -> m c) -> m a -> b -> m c\n" }
+Function { name: "spreadChoose\n", type_signature: "(t -> t1 -> Pattern b) -> [t] -> t1 -> Pattern b\n" }
+Function { name: "spreadf\n", type_signature: "[a -> Pattern b] -> a -> Pattern b\n" }
+Function { name: "spreadr\n", type_signature: "(t -> t1 -> Pattern b) -> [t] -> t1 -> Pattern b\n" }
+Function { name: "stackwith\n", type_signature: "Sound.Tidal.Context.Unionable a => Pattern a -> [Pattern a] -> Pattern a\n" }
+Function { name: "step\n", type_signature: "String -> String -> Pattern String\n" }
+Function { name: "step'\n", type_signature: "[String] -> String -> Pattern String\n" }
+Function { name: "steps\n", type_signature: "[(String, String)] -> Pattern String\n" }
+Function { name: "stretch\n", type_signature: "Pattern a -> Pattern a\n" }
+Function { name: "stripe\n", type_signature: "Pattern Int -> Pattern a -> Pattern a\n" }
+Function { name: "struct\n", type_signature: "Pattern Bool -> Pattern a -> Pattern a\n" }
+Function { name: "stutter\n", type_signature: "Integral i => i -> Time -> Pattern a -> Pattern a\n" }
+Function { name: "substruct\n", type_signature: "Pattern String -> Pattern b -> Pattern b\n" }
+Function { name: "substruct'\n", type_signature: "Pattern Int -> Pattern a -> Pattern a\n" }
+Function { name: "superimpose\n", type_signature: "(Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "swing\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "swingBy\n", type_signature: "Pattern Time -> Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "tabby\n", type_signature: "Integer -> Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "timeLoop\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "timeToRand\n", type_signature: "RealFrac a => a -> Double\n" }
+Function { name: "toScale\n", type_signature: "Num a => [a] -> Pattern Int -> Pattern a\n" }
+Function { name: "toScale'\n", type_signature: "Num a => Int -> [a] -> Pattern Int -> Pattern a\n" }
+Function { name: "triple\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "trunc\n", type_signature: "Pattern Time -> Pattern a -> Pattern a\n" }
+Function { name: "unDegradeBy\n", type_signature: "Pattern Double -> Pattern a -> Pattern a\n" }
+Function { name: "unfix\n", type_signature: "(ControlPattern -> ControlPattern) -> ControlPattern -> ControlPattern -> ControlPattern\n" }
+Function { name: "unfixRange\n", type_signature: "(ControlPattern -> Pattern ControlMap) -> Pattern(containers-0.5.7.1:Data.Map.Base.Map String (Value, Value)) -> ControlPattern -> Pattern ControlMap\n" }
+Function { name: "unwrap'\n", type_signature: "Pattern (Pattern a) -> Pattern a\n" }
+Function { name: "ur\n", type_signature: "Time -> Pattern String -> [(String, Pattern a)] -> [(String, Pattern a -> Pattern a)] -> Pattern a\n" }
+Function { name: "wchoose\n", type_signature: "[(a, Double)] -> Pattern a\n" }
+Function { name: "wchooseBy\n", type_signature: "Pattern Double -> [(a, Double)] -> Pattern a\n" }
+Function { name: "wedge\n", type_signature: "Time -> Pattern a -> Pattern a -> Pattern a\n" }
+Function { name: "whenmod\n", type_signature: "Int -> Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "within\n", type_signature: "Arc -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "within'\n", type_signature: "Arc -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a\n" }
+Function { name: "(*>)\n", type_signature: "Pattern (a -> b) -> Pattern a -> Pattern b\n" }
+Function { name: "(<*)\n", type_signature: "Pattern (a -> b) -> Pattern a -> Pattern b\n" }
+Function { name: "__compress\n", type_signature: "Arc -> Pattern a -> Pattern a\n" }
+Function { name: "__compressTo\n", type_signature: "Arc -> Pattern a -> Pattern a\n" }
+Function { name: "_fastGap\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "applyFIS\n", type_signature: "(Double -> Double) -> (Int -> Int) -> (String -> String) -> Value -> Value\n" }
+Function { name: "arcCycles\n", type_signature: "Arc -> [Arc]\n" }
+Function { name: "arcCyclesZW\n", type_signature: "Arc -> [Arc]\n" }
+Function { name: "compareDefrag\n", type_signature: "(Eq a, Ord a) => [Event a] -> [Event a] -> Bool\n" }
+Function { name: "cycleArcsInArc\n", type_signature: "Arc -> [Arc]\n" }
+Function { name: "cyclePos\n", type_signature: "Time -> Time\n" }
+Function { name: "cyclesInArc\n", type_signature: "Integral a => Arc -> [a]\n" }
+Function { name: "defragParts\n", type_signature: "Eq a => [Event a] -> [Event a]\n" }
+Function { name: "empty\n", type_signature: "Pattern a\n" }
+Function { name: "eventHasOnset\n", type_signature: "Event a -> Bool\n" }
+Function { name: "eventPart\n", type_signature: "Event a -> Arc\n" }
+Function { name: "eventValue\n", type_signature: "Event a -> a\n" }
+Function { name: "eventWhole\n", type_signature: "Event a -> Arc\n" }
+Function { name: "eventWholeOnset\n", type_signature: "Event a -> Time\n" }
+Function { name: "fNum2\n", type_signature: "(Int -> Int -> Int) -> (Double -> Double -> Double) -> Value -> Value -> Value\n" }
+Function { name: "filterJust\n", type_signature: "Pattern (Maybe a) -> Pattern a\n" }
+Function { name: "filterValues\n", type_signature: "(a -> Bool) -> Pattern a -> Pattern a\n" }
+Function { name: "filterWhen\n", type_signature: "(Time -> Bool) -> Pattern a -> Pattern a\n" }
+Function { name: "getF\n", type_signature: "Value -> Maybe Double\n" }
+Function { name: "getI\n", type_signature: "Value -> Maybe Int\n" }
+Function { name: "getS\n", type_signature: "Value -> Maybe String\n" }
+Function { name: "innerJoin\n", type_signature: "Pattern (Pattern a) -> Pattern a\n" }
+Function { name: "isAdjacent\n", type_signature: "Eq a => Event a -> Event a -> Bool\n" }
+Function { name: "isAnalog\n", type_signature: "Pattern a -> Bool\n" }
+Function { name: "isDigital\n", type_signature: "Pattern a -> Bool\n" }
+Function { name: "isIn\n", type_signature: "Arc -> Time -> Bool\n" }
+Function { name: "mapArc\n", type_signature: "(Time -> Time) -> Arc -> Arc\n" }
+Function { name: "mapCycle\n", type_signature: "(Time -> Time) -> Arc -> Arc\n" }
+Function { name: "matchManyToOne\n", type_signature: "  (b -> a -> Bool) -> Pattern a -> Pattern b -> Pattern (Bool, b)\n" }
+Function { name: "nextSam\n", type_signature: "Time -> Time\n" }
+Function { name: "noOv\n", type_signature: "String -> a\n" }
+Function { name: "onsetIn\n", type_signature: "Arc -> Event a -> Bool\n" }
+Function { name: "outerJoin\n", type_signature: "Pattern (Pattern a) -> Pattern a\n" }
+Function { name: "playFor\n", type_signature: "Time -> Time -> Pattern a -> Pattern a\n" }
+Function { name: "prettyRat\n", type_signature: "Rational -> String\n" }
+Function { name: "queryArc\n", type_signature: "Pattern a -> Arc -> [Event a]\n" }
+Function { name: "rotL\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "rotR\n", type_signature: "Time -> Pattern a -> Pattern a\n" }
+Function { name: "sam\n", type_signature: "Time -> Time\n" }
+Function { name: "showFrac\n", type_signature: "Integer -> Integer -> String\n" }
+Function { name: "showPattern\n", type_signature: "Show a => Arc -> Pattern a -> String\n" }
+Function { name: "splitQueries\n", type_signature: "Pattern a -> Pattern a\n" }
+Function { name: "subArc\n", type_signature: "Arc -> Arc -> Maybe Arc\n" }
+Function { name: "tParam\n", type_signature: "(t1 -> t2 -> Pattern a) -> Pattern t1 -> t2 -> Pattern a\n" }
+Function { name: "tParam2\n", type_signature: "(a -> b -> c -> Pattern d) -> Pattern a -> Pattern b -> c -> Pattern d\n" }
+Function { name: "tParam3\n", type_signature: "(a -> b -> c -> Pattern d -> Pattern e) -> Pattern a -> Pattern b -> Pattern c -> Pattern d -> Pattern e\n" }
+Function { name: "tParamSqueeze\n", type_signature: "(a -> Pattern b -> Pattern c) -> Pattern a -> Pattern b -> Pattern c\n" }
+Function { name: "timeToCycleArc\n", type_signature: "Time -> Arc\n" }
+Function { name: "toTime\n", type_signature: "Real a => a -> Rational\n" }
+Function { name: "unwrap\n", type_signature: "Pattern (Pattern a) -> Pattern a\n" }
+Function { name: "unwrapSqueeze\n", type_signature: "Pattern (Pattern a) -> Pattern a\n" }
+Function { name: "withEvent\n", type_signature: "(Event a -> Event b) -> Pattern a -> Pattern b\n" }
+Function { name: "withEvents\n", type_signature: "([Event a] -> [Event b]) -> Pattern a -> Pattern b\n" }
+Function { name: "withPart\n", type_signature: "(Arc -> Arc) -> Pattern a -> Pattern a\n" }
+Function { name: "withQueryArc\n", type_signature: "(Arc -> Arc) -> Pattern a -> Pattern a\n" }
+Function { name: "withQueryTime\n", type_signature: "(Time -> Time) -> Pattern a -> Pattern a\n" }
+Function { name: "withResultArc\n", type_signature: "(Arc -> Arc) -> Pattern a -> Pattern a\n" }
+Function { name: "withResultTime\n", type_signature: "(Time -> Time) -> Pattern a -> Pattern a\n" }
